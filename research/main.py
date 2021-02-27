@@ -4,36 +4,13 @@ person is present. It uses pretrained DeepLabV3 model with a ResNet-101
 backbone.
 """
 
-import torch
-from PIL import Image
-from torchvision import transforms
-import numpy as np
-import cv2
 import argparse
 
+import cv2
+import numpy as np
+from PIL import Image
 
-def load_model():
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = torch.hub.load('pytorch/vision:v0.6.0', 'deeplabv3_resnet101',
-                           pretrained=True)
-    model.to(device).eval()
-    return model
-
-
-def predict(model, input_image):
-    preprocess = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                             std=[0.229, 0.224, 0.225])
-    ])
-    input_tensor = preprocess(input_image)
-    input_batch = input_tensor.unsqueeze(0)
-    if torch.cuda.is_available():
-        input_batch = input_batch.to('cuda')
-        model.to('cuda')
-    with torch.no_grad():
-        output = model(input_batch)['out'][0]
-    return output.argmax(0)
+from model import resnet101, predict
 
 
 def blur(image, output_prediction):
@@ -71,7 +48,7 @@ def process(from_dir, to_dir, process_size):
     print(f"input image size: {input_image.size}")
     squared_image = square(input_image, min(process_size, w, h))
     print(f"squared image size: {squared_image.size}")
-    model = load_model()
+    model = resnet101()
     output_predictions = predict(model, squared_image)
     blurred_image = blur(input_image, output_predictions)
     blurred_image.save(to_dir)
