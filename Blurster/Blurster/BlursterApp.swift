@@ -1,14 +1,14 @@
 //
-//  blursterApp.swift
-//  blurster
+//  BlursterApp.swift
+//  Blurster
 //
-//  Created by Aleksei Klopov on 27.02.2021.
+//  Created by Aleksei Klopov on 03.03.2021.
 //
 
 import SwiftUI
 
 @main
-struct blursterApp: App {
+struct BlursterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

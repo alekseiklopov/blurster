@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  blurster
+//  Blurster
 //
-//  Created by Aleksei Klopov on 27.02.2021.
+//  Created by Aleksei Klopov on 03.03.2021.
 //
 
 import SwiftUI

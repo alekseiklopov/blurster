@@ -1,6 +1,6 @@
 //
-//  ImagePicker.swift
-//  blurster
+//  ImageUtils.swift
+//  Blurster
 //
 //  Created by Aleksei Klopov on 03.03.2021.
 //
