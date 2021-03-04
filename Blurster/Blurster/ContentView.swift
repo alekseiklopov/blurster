@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @StateObject var viewModel = ViewModel()
     
     var body: some View {
@@ -46,7 +47,7 @@ struct ContentView: View {
                 Spacer()
                 if viewModel.selectedImage != nil {
                     Button(action: {
-                        print("Processing image...")
+                        viewModel.processImage()
                     }, label: {
                         Text("Get blurred")
                             .frame(minWidth: 0, idealWidth: 150, maxWidth: 200,
@@ -67,32 +68,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-extension ContentView {
-    final class ViewModel: ObservableObject {
-        
-        @Published var selectedImage: UIImage?
-        @Published var isPresentingImagePicker = false
-        
-        private(set) var sourceType: UIImagePickerController.SourceType =
-            .camera
-        
-        func choosePhoto() {
-            sourceType = .photoLibrary
-            isPresentingImagePicker = true
-        }
-        
-        func takePhoto() {
-            sourceType = .camera
-            isPresentingImagePicker = true
-        }
-        
-        func didSelectImage(_ image: UIImage?) {
-            selectedImage = image
-            isPresentingImagePicker = false
-        }
-        
     }
 }
