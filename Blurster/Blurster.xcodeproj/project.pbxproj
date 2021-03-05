@@ -12,9 +12,9 @@
 		5FCF28BF25EFD06300B1B52F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCF28BE25EFD06300B1B52F /* Assets.xcassets */; };
 		5FCF28C225EFD06300B1B52F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCF28C125EFD06300B1B52F /* Preview Assets.xcassets */; };
 		5FCF28CB25EFD0DA00B1B52F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF28CA25EFD0DA00B1B52F /* ImagePicker.swift */; };
-		5FCF28D025EFD5A900B1B52F /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF28CF25EFD5A900B1B52F /* DeepLabV3.mlmodel */; };
 		5FFB09F625F188B100EE859F /* ContentView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB09F525F188B100EE859F /* ContentView+ViewModel.swift */; };
-		5FFB0A0925F1961700EE859F /* UIImage+Segmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB0A0825F1961700EE859F /* UIImage+Segmentation.swift */; };
+		5FFB0A0925F1961700EE859F /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB0A0825F1961700EE859F /* UIImage+Helpers.swift */; };
+		5FFC0E0B25F28534002F1379 /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5FFC0E0A25F28534002F1379 /* DeepLabV3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		5FCF28C125EFD06300B1B52F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5FCF28C325EFD06300B1B52F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FCF28CA25EFD0DA00B1B52F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		5FCF28CF25EFD5A900B1B52F /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 		5FFB09F525F188B100EE859F /* ContentView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ViewModel.swift"; sourceTree = "<group>"; };
-		5FFB0A0825F1961700EE859F /* UIImage+Segmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Segmentation.swift"; sourceTree = "<group>"; };
+		5FFB0A0825F1961700EE859F /* UIImage+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helpers.swift"; sourceTree = "<group>"; };
+		5FFC0E0A25F28534002F1379 /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				5FCF28CA25EFD0DA00B1B52F /* ImagePicker.swift */,
 				5FCF28BC25EFD06200B1B52F /* ContentView.swift */,
 				5FFB09F525F188B100EE859F /* ContentView+ViewModel.swift */,
-				5FFB0A0825F1961700EE859F /* UIImage+Segmentation.swift */,
+				5FFB0A0825F1961700EE859F /* UIImage+Helpers.swift */,
 				5FCF28C025EFD06300B1B52F /* Preview Content */,
 			);
 			path = Blurster;
@@ -84,7 +84,7 @@
 		5FCF28D225EFD5BE00B1B52F /* MLModels */ = {
 			isa = PBXGroup;
 			children = (
-				5FCF28CF25EFD5A900B1B52F /* DeepLabV3.mlmodel */,
+				5FFC0E0A25F28534002F1379 /* DeepLabV3.mlmodel */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 				5FFB09F625F188B100EE859F /* ContentView+ViewModel.swift in Sources */,
 				5FCF28BD25EFD06300B1B52F /* ContentView.swift in Sources */,
 				5FCF28BB25EFD06200B1B52F /* BlursterApp.swift in Sources */,
+				5FFC0E0B25F28534002F1379 /* DeepLabV3.mlmodel in Sources */,
 				5FCF28CB25EFD0DA00B1B52F /* ImagePicker.swift in Sources */,
-				5FCF28D025EFD5A900B1B52F /* DeepLabV3.mlmodel in Sources */,
-				5FFB0A0925F1961700EE859F /* UIImage+Segmentation.swift in Sources */,
+				5FFB0A0925F1961700EE859F /* UIImage+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

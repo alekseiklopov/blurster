@@ -13,13 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Spacer()
+            
+            // MARK: - Image
             if viewModel.selectedImage != nil {
+                Spacer()
                 Image(uiImage: viewModel.selectedImage!)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                Spacer()
             }
+            
+            // MARK: - Buttons
+            Spacer()
             HStack {
                 Spacer()
                 HStack {
@@ -41,7 +45,7 @@ struct ContentView: View {
                                                     viewModel.sourceType,
                                                 completionHandler:
                                                     viewModel.didSelectImage
-                            )})
+                                    )})
                     })
                 }
                 Spacer()
@@ -49,7 +53,7 @@ struct ContentView: View {
                     Button(action: {
                         viewModel.processImage()
                     }, label: {
-                        Text("Get blurred")
+                        Text("Get blurred!")
                             .frame(minWidth: 0, idealWidth: 150, maxWidth: 200,
                                    minHeight: 0, idealHeight: 40, maxHeight: 50,
                                    alignment: .center)

@@ -33,7 +33,10 @@ extension ContentView {
         }
         
         func processImage() {
-            selectedImage = selectedImage?.getBlurred()
+            // FIXME: Check why async doesn't work
+            DispatchQueue.main.async {
+                self.selectedImage = self.selectedImage?.getBlurred()
+            }
         }
         
     }
