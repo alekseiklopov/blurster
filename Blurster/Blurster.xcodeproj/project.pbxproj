@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F392A7F25F3B15600E2CEB3 /* CIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F392A7E25F3B15600E2CEB3 /* CIImage+Helpers.swift */; };
 		5FCF28BB25EFD06200B1B52F /* BlursterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF28BA25EFD06200B1B52F /* BlursterApp.swift */; };
 		5FCF28BD25EFD06300B1B52F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF28BC25EFD06200B1B52F /* ContentView.swift */; };
 		5FCF28BF25EFD06300B1B52F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCF28BE25EFD06300B1B52F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F392A7E25F3B15600E2CEB3 /* CIImage+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+Helpers.swift"; sourceTree = "<group>"; };
 		5FCF28B725EFD06200B1B52F /* Blurster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blurster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCF28BA25EFD06200B1B52F /* BlursterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlursterApp.swift; sourceTree = "<group>"; };
 		5FCF28BC25EFD06200B1B52F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				5FCF28BC25EFD06200B1B52F /* ContentView.swift */,
 				5FFB09F525F188B100EE859F /* ContentView+ViewModel.swift */,
 				5FFB0A0825F1961700EE859F /* UIImage+Helpers.swift */,
+				5F392A7E25F3B15600E2CEB3 /* CIImage+Helpers.swift */,
 				5FCF28C025EFD06300B1B52F /* Preview Content */,
 			);
 			path = Blurster;
@@ -160,6 +163,7 @@
 			files = (
 				5FFB09F625F188B100EE859F /* ContentView+ViewModel.swift in Sources */,
 				5FCF28BD25EFD06300B1B52F /* ContentView.swift in Sources */,
+				5F392A7F25F3B15600E2CEB3 /* CIImage+Helpers.swift in Sources */,
 				5FCF28BB25EFD06200B1B52F /* BlursterApp.swift in Sources */,
 				5FFC0E0B25F28534002F1379 /* DeepLabV3.mlmodel in Sources */,
 				5FCF28CB25EFD0DA00B1B52F /* ImagePicker.swift in Sources */,
