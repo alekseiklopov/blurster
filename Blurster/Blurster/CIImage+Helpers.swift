@@ -19,14 +19,6 @@ extension CIImage {
     
     func blurWith(mask: CIImage) -> CIImage? {
         let radius = 5
-//        let clampedImage = self.clampedToExtent()
-//        guard let blurredCIImage = CIFilter(
-//            name: "CIGaussianBlur",
-//            parameters: [
-//                kCIInputImageKey: self,
-//                kCIInputRadiusKey: 5
-//            ])?.outputImage
-//        else { return nil }
         let blurredCIImage = self
             .clampedToExtent()
             .applyingFilter("CIGaussianBlur",
