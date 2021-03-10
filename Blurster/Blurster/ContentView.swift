@@ -31,37 +31,29 @@ struct ContentView: View {
                         viewModel.choosePhoto()
                     }, label: {
                         Text("Choose Photo")
-                            .frame(minWidth: 0, idealWidth: 150, maxWidth: 200,
-                                   minHeight: 0, idealHeight: 40, maxHeight: 50,
-                                   alignment: .center)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(30)
-                            .padding(10)
-                            .sheet(isPresented:
-                                    $viewModel.isPresentingImagePicker,
-                                   content: {
-                                    ImagePicker(sourceType:
-                                                    viewModel.sourceType,
-                                                completionHandler:
-                                                    viewModel.didSelectImage
+                            .sheet(
+                                isPresented: $viewModel.isPresentingImagePicker,
+                                content: {ImagePicker(
+                                    sourceType: viewModel.sourceType,
+                                    completionHandler: viewModel.didSelectImage
                                     )})
-                    })
+                    }).buttonStyle(blueButtonStyle())
                 }
                 Spacer()
                 if viewModel.selectedImage != nil {
-                    Button(action: {
-                        viewModel.processImage()
-                    }, label: {
-                        Text("Get blurred!")
-                            .frame(minWidth: 0, idealWidth: 150, maxWidth: 200,
-                                   minHeight: 0, idealHeight: 40, maxHeight: 50,
-                                   alignment: .center)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(30)
-                            .padding(10)
-                    })
+                    if viewModel.isProcessed {
+                        Button(action: {
+                            viewModel.saveImage()
+                        }, label: {
+                            Text("Save Photo")
+                        }).buttonStyle(blueButtonStyle())
+                    } else {
+                        Button(action: {
+                            viewModel.processImage()
+                        }, label: {
+                            Text("Get Blurred!")
+                        }).buttonStyle(blueButtonStyle())
+                    }
                     Spacer()
                 }
             }
@@ -72,5 +64,19 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct blueButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(minWidth: 0, idealWidth: 150, maxWidth: 200,
+                   minHeight: 0, idealHeight: 40, maxHeight: 50,
+                   alignment: .center)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(30)
+            .padding(10)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }

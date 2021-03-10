@@ -13,6 +13,7 @@ extension ContentView {
         
         @Published var selectedImage: UIImage?
         @Published var isPresentingImagePicker = false
+        @Published var isProcessed = false
         
         private(set) var sourceType: UIImagePickerController.SourceType =
             .camera
@@ -36,6 +37,15 @@ extension ContentView {
             // FIXME: Check why async doesn't work
             DispatchQueue.main.async {
                 self.selectedImage = self.selectedImage?.getBlurred()
+                self.isProcessed = true
+            }
+        }
+        
+        func saveImage() {
+            if self.selectedImage != nil {
+                UIImageWriteToSavedPhotosAlbum(self.selectedImage!,
+                                               nil, nil, nil)
+                self.isProcessed = false
             }
         }
         
