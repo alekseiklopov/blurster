@@ -11,7 +11,7 @@ import CoreML
 extension UIImage {
     
     // MARK: - Image predictions
-    func getBlurred() -> UIImage? {
+    func getBlurred(radius: Int) -> UIImage? {
         
         // Set a size for making predictions using the ML model
         let n = 513
@@ -73,7 +73,7 @@ extension UIImage {
             // Blur image background
             guard let ciImage = CIImage(image: self),
                   let outputImage = ciImage
-                    .blurWith(mask: maskCIImage)?
+                    .blurWith(mask: maskCIImage, radius: radius)?
                     .toUIImage()
             else { return nil }
             
