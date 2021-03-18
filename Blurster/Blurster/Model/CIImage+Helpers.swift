@@ -17,8 +17,7 @@ extension CIImage {
         return UIImage(cgImage: cgImage, scale: 0, orientation: .up)
     }
     
-    func blurWith(mask: CIImage) -> CIImage? {
-        let radius = 5
+    func blurWith(mask: CIImage, radius: Int) -> CIImage? {
         let blurredCIImage = self
             .clampedToExtent()
             .applyingFilter("CIGaussianBlur",

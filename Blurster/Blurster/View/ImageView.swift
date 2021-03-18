@@ -1,5 +1,5 @@
 //
-//  ImagePicker.swift
+//  ImageView.swift
 //  Blurster
 //
 //  Created by Aleksei Klopov on 02.03.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImagePicker: UIViewControllerRepresentable {
+struct ImageView: UIViewControllerRepresentable {
     
     let sourceType: UIImagePickerController.SourceType
     let completionHandler: (UIImage?) -> Void

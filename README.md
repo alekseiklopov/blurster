@@ -1,16 +1,36 @@
 # Blurster
 
-Blurster is an iOS app for blurring the background in portrait images using DeepLabV3 – 
-image segmentation model from CoreML. Below you can see a demonstration 
-of the app.
+> "Learning is an active process. We learn by doing. ... Only knowledge 
+> that is used sticks in your mind." – Dale Carnegie.
+
+Blurster is an iOS app for blurring the background in portrait images. 
+
+## SwiftUI
+
+This app uses DeepLabV3 – a pretrained image segmentation model from CoreML. 
+Below you can see a demonstration of the app.
 
 <img src="/media/demo.gif" width="250"/>
 
+All iOS code is [here](https://github.com/alekseiklopov/blurster/tree/main/Blurster).
+
+## PyTorch
+
 Here is an example of how the PyTorch DeepLabV3 model with a ResNet-101 
-backbone works with an image when it's pre-resized to 1024-by-1024 pixels.
+backbone works with an image when it's pre-resized to the same size as 
+CoreML model (513-by-513 pixels).
 
-<img src="/media/diff.jpg" width="800"/>
+<img src="/media/demo_unite_pytorch.jpg" width="800"/>
 
-As you can see, there is a better result in the second case, since we used a higher
-image resolution: 1024x1024 instead of 513x513. We can improve the performance by 
-using a larger input array.
+All Python code is [here](https://github.com/alekseiklopov/blurster/tree/main/research).
+
+### Installation
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+```bash
+# Convert data/1.jpg to data/2.jpg with a segmentation mask 513x513
+python main.py data/1.jpg data/2.jpg -s 513. 
+```
