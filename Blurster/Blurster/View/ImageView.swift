@@ -2,7 +2,7 @@
 //  ImageView.swift
 //  Blurster
 //
-//  Created by Aleksei Klopov on 02.03.2021.
+//  Created by Aleksei on 02.03.2021.
 //
 
 import SwiftUI

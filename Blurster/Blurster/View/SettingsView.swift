@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  Blurster
 //
-//  Created by Aleksei Klopov on 12.03.2021.
+//  Created by Aleksei on 12.03.2021.
 //
 
 import SwiftUI

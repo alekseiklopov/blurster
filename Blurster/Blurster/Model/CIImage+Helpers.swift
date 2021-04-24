@@ -2,7 +2,7 @@
 //  CIImage+Helpers.swift
 //  Blurster
 //
-//  Created by Aleksei Klopov on 06.03.2021.
+//  Created by Aleksei on 06.03.2021.
 //
 
 import UIKit

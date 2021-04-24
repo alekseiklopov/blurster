@@ -2,7 +2,7 @@
 //  ProcessingView.swift
 //  Blurster
 //
-//  Created by Aleksei Klopov on 13.03.2021.
+//  Created by Aleksei on 13.03.2021.
 //
 
 import SwiftUI

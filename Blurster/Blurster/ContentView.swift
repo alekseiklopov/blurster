@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Blurster
 //
-//  Created by Aleksei Klopov on 03.03.2021.
+//  Created by Aleksei on 03.03.2021.
 //
 
 import SwiftUI
