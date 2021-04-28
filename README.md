@@ -3,7 +3,7 @@
 > "Learning is an active process. We learn by doing. ... Only knowledge 
 > that is used sticks in your mind." – Dale Carnegie.
 
-Blurster is an iOS app for blurring the background in portrait images. 
+**Blurster** is an iOS app for blurring the background in portrait images. 
 
 ## SwiftUI
 
