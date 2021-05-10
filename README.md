@@ -32,5 +32,5 @@ pip install -r requirements.txt
 ### Usage
 ```bash
 # Convert data/1.jpg to data/2.jpg with a segmentation mask 513x513
-python main.py data/1.jpg data/2.jpg -s 513. 
+python main.py data/1.jpg data/2.jpg -s 513
 ```
